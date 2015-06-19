@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+# Where is iptables?  It varies with distribution.
+export IPTABLES=/sbin/iptables
+
+
+# Out with the old.
+
+if $IPTABLES -L INPUT | grep -q ETBLOCKLIST ; then
+  $IPTABLES -D INPUT -j ETBLOCKLIST
+fi
+if $IPTABLES -L FORWARD | grep -q ETBLOCKLIST ; then
+  $IPTABLES -D FORWARD -j ETBLOCKLIST
+fi
+$IPTABLES -F ETBLOCKLIST
+$IPTABLES -X ETBLOCKLIST
+$IPTABLES -F LOGNDROP
+$IPTABLES -X LOGNDROP
+
+# if stopping
+
+if [[ "${1}" = "stop" ]] ; then
+  exit
+fi
+
+# A place to work.
+
+dir=$(mktemp --directory --tmpdir)
+(
+	cd ${dir}
+	wget --quiet http://rules.emergingthreats.net/fwrules/emerging-IPTABLES-ALL.rules
+)
+
+
+# and in with the new.
+
+source ${dir}/emerging-IPTABLES-ALL.rules
+
+
+# Cleanup
+
+rm -f ${dir}/emerging-IPTABLES-ALL.rules
+rmdir ${dir}
