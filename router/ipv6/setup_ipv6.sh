@@ -35,6 +35,7 @@ wood.vtluug.org
 cyberdelia.vtluug.org
 mirror.ece.vt.edu
 tardis.vtluug.org
+joey.vtluug.org
 ')
 
 # XXX: remember to edit /etc/npd6.conf
