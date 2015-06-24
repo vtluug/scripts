@@ -24,7 +24,7 @@ attrs = {
         'uid': [username],
         'cn': [realname],
         'objectClass': ['account', 'posixAccount', 'top',
-            'shadowAccount', 'vtluugPerson'],
+                        'shadowAccount', 'vtluugPerson'],
         'userPassword': ["{{SASL}}{0}@VTLUUG.ORG".format(username)],
         'shadowLastChange': ['14996'],
         'shadowMax': ['99999'],

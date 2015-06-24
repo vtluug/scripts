@@ -10,8 +10,6 @@ import copy
 import ldap
 import ldap.modlist
 import lib
-import re
-import sys
 
 LOCKOUT_DN = "cn=noshell,ou=Groups,dc=vtluug,dc=org"
 
@@ -32,7 +30,7 @@ def manage_users(args):
             result = l.search_s(LOCKOUT_DN, ldap.SCOPE_SUBTREE)
             oldattrs = result[0][1]
             attrs = copy.deepcopy(oldattrs)
-            if not 'memberUid' in attrs:
+            if 'memberUid' not in attrs:
                 attrs['memberUid'] = []
 
             if username in attrs['memberUid']:
@@ -49,10 +47,10 @@ def manage_users(args):
             result = l.search_s(LOCKOUT_DN, ldap.SCOPE_SUBTREE)
             oldattrs = result[0][1]
             attrs = copy.deepcopy(oldattrs)
-            if not 'memberUid' in attrs:
+            if 'memberUid' not in attrs:
                 attrs['memberUid'] = []
 
-            if not username in attrs['memberUid']:
+            if username not in attrs['memberUid']:
                 print("Error: {0} is not locked out.".format(username))
                 continue
 
@@ -92,12 +90,13 @@ def manage_users(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Manage LDAP accounts.")
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('--enable-shell', action='store_true',
-            help="Enable shell access for the specified LDAP accounts.")
+    group.add_argument(
+        '--enable-shell', action='store_true',
+        help="Enable shell access for the specified LDAP accounts.")
     group.add_argument('-l', '--lock', action='store_true',
-            help="Lock out the specified LDAP accounts.")
+                       help="Lock out the specified LDAP accounts.")
     group.add_argument('-u', '--unlock', action='store_true',
-            help="Unlock the specified LDAP accounts.")
+                       help="Unlock the specified LDAP accounts.")
     parser.add_argument('username', type=str, nargs='+')
     args = parser.parse_args()
 

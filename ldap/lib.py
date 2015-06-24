@@ -4,7 +4,6 @@
 # author: mutantmonkey <mutantmonkey@mutantmonkey.in>
 ###############################################################################
 
-import getpass
 import ldap
 import ldap.dn
 import ldap.sasl
