@@ -15,27 +15,17 @@ ext_if=eth0
 int_if=eth1
 
 ext_ip=2001:468:c80:6103:211:43ff:fe30:a72
-router_ip=fe80::2d0:1ff:feab:a800
+router_ip=fe80::82ac:ac01:2fee:7af0
 
-# static ARP
-arp -s 128.173.88.1 00:d0:01:ab:a8:00
-ip -6 neigh add fe80::2d0:1ff:feab:a800 dev $ext_if lladdr 00:d0:01:ab:a8:00 permanent
+# static ARP THIS SHOULD BE AUTOMATED!!!
+arp -s 128.173.88.1 80:ac:ac:ee:7a:f0
+ip -6 neigh add $router_ip dev $ext_if lladdr 80:ac:ac:ee:7a:f0 permanent
 
 MACHINES=('
 acidburn.vtluug.org
-akhaten.ipv6.hazinski.net
-blade.vtluug.org
-cerealkiller.vtluug.org
-crashoverride.vtluug.org
-lordnikon.vtluug.org
-milton.vtluug.org
-ns1.vtluug.org
-theplague.vtluug.org
-wood.vtluug.org
+razor.vtluug.org
 cyberdelia.vtluug.org
-mirror.ece.vt.edu
-tardis.vtluug.org
-joey.vtluug.org
+sczi.vtluug.org
 ')
 
 # XXX: remember to edit /etc/npd6.conf
@@ -55,8 +45,8 @@ ip6tables -A FORWARD -p tcp --dport 27017 -j DROP
 ip6tables -A FORWARD -p tcp --dport 28017 -j DROP
 # }}}
 
-sysctl -w net.ipv6.conf.$ext_if.accept_ra=0
-sysctl -w net.ipv6.conf.$int_if.accept_ra=0
+sysctl -w net.ipv6.conf.$ext_if.accept_ra=2
+sysctl -w net.ipv6.conf.$int_if.accept_ra=2
 sysctl -w net.ipv6.conf.$ext_if.forwarding=1
 sysctl -w net.ipv6.conf.$int_if.forwarding=1
 sysctl -w net.ipv6.conf.$ext_if.proxy_ndp=1

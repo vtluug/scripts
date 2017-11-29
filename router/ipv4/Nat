@@ -15,6 +15,10 @@
 # eth1 - inside interface
 #
 
+### THINGS THAT NEED TO BE DONE
+# ifconfig's output is non-compliant on ubuntu; on other linuxes and obsd, it does not say "inet addr:"
+# must transition to using iproute2 or `ifconfig $IFACE inet` and parsing
+
 
 ### The following is a list of IP address that should be mapped through
 ### to the outside.
@@ -24,13 +28,11 @@ Not_Inside_Hosts='
 '
 
 Inside_Hosts='
+        luug.ece.vt.edu
+	luug0.ece.vt.edu
 	luug1.ece.vt.edu
 	luug2.ece.vt.edu
 	luug3.ece.vt.edu
-	mirror.ece.vt.edu
-	luug.ece.vt.edu
-	mjh.ece.vt.edu
-	luug0.ece.vt.edu
 '
 
 
