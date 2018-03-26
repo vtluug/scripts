@@ -16,6 +16,8 @@
 EXT_IF=eth0
 INT_IF=eth1
 
+ARPING_HOST=128.173.88.1
+
 # Machines being proxied
 # Should be same as https://vtluug.org/wiki/Infrastructure:Network
 # luug4.ece.vt.edu is actually #mjh.ece.vt.edu but we hvae to use luug4
@@ -25,6 +27,13 @@ cyberdelia.vtluug.org
 razor.vtluug.org
 luug4.ece.vt.edu
 ')
+
+# Attempt to do an "Unsolicited ARP" to the Burris router
+function arp_ping_the_router {
+    echo 1 > /proc/sys/net/ipv4/ip_nonlocal_bind
+    arping -q -I $EXT_IF -U -c 2 -s $1 $ARPING_HOST
+    echo 0 > /proc/sys/net/ipv4/ip_nonlocal_bind
+}
 
 # Enable flags and add machines
 # $1 is {start|stop}
@@ -70,6 +79,7 @@ function manage {
             if [ -n "$addr4" ]; then
                 echo -e "\t$machine \t $addr4"
 #                ip route $action $addr4 dev $INT_IF
+#                arp_ping_the_router $addr4
             else
                 echo -e "\tWarning: No A record for $machine"
             fi
