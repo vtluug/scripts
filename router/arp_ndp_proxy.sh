@@ -40,6 +40,9 @@ function arp_ping_the_router {
 # $2 is [ipv4|ipv6]
 function manage {
     # Set start/stop variables
+    # Since starting/stoping are very similar commands these variables set the
+    #   few needed variables accordingly (instead of having 2 separate
+    #   functions that do 95% the same thing)
     enable=1
     action="add"
     if [ "$1" == "stop" ]; then
@@ -47,7 +50,7 @@ function manage {
         action="delete"
     fi
 
-    # Enable flags
+    # Enable ipv4 flags
     echo -e "$action flags"
     if [ "$2" == "ipv4" ] || [ "$2" == "" ]; then
         echo -e "\tConfiguring ipv4 flags"
@@ -56,6 +59,7 @@ function manage {
 #        echo $enable > /proc/sys/net/ipv4/conf/$EXT_IF/forwarding
 #        echo $enable > /proc/sys/net/ipv4/conf/$INT_IF/forwarding
     fi
+    # Enable ipv6 flags
     if [ "$2" == "ipv6" ] || [ "$2" == "" ]; then
         echo -e "\tConfguring ipv6 flags"
 #        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/accept_ra
@@ -74,16 +78,19 @@ function manage {
         addr4=$(dig $machine +short a)
         addr6=$(dig $machine +short aaaa)
 
-        # Add ipv4 and/or ipv6 hosts
+        # Add/Del ipv4 machines
         if [ "$2" == "ipv4" ] || [ "$2" == "" ]; then
             if [ -n "$addr4" ]; then
                 echo -e "\t$machine \t $addr4"
+
 #                ip route $action $addr4 dev $INT_IF
+                # Refresh Burrus's ARP cache
 #                arp_ping_the_router $addr4
             else
                 echo -e "\tWarning: No A record for $machine"
             fi
         fi
+        # Add/Del ipv6 machines
         if [ "$2" == "ipv6" ] || [ "$2" == "" ]; then
             if [ -n "$addr6" ]; then
                 echo -e "\t$machine \t $addr6"
