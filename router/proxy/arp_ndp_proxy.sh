@@ -15,8 +15,8 @@
 # Make sure path is proper
 export PATH=/sbin:/usr/sbin:${PATH}
 
-EXT_IF=eth0
-INT_IF=eth1
+EXT_IF=$EXTERNAL_IF # Refers to https://vtluug.org/wiki/Infrastructure:Network
+INT_IF=$INTERNAL_IF # Refers to https://vtluug.org/wiki/Infrastructure:Network
 
 ARPING_HOST=128.173.88.1
 
@@ -57,20 +57,20 @@ manage () {
     echo -e "$action flags:"
     if [ "$2" == "ipv4" ] || [ "$2" == "" ]; then
         echo -e "\tConfiguring ipv4 flags"
-#        echo $enable > /proc/sys/net/ipv4/conf/$EXT_IF/proxy_arp
-#        echo $enable > /proc/sys/net/ipv4/conf/$INT_IF/proxy_arp
-#        echo $enable > /proc/sys/net/ipv4/conf/$EXT_IF/forwarding
-#        echo $enable > /proc/sys/net/ipv4/conf/$INT_IF/forwarding
+        echo $enable > /proc/sys/net/ipv4/conf/$EXT_IF/proxy_arp
+        echo $enable > /proc/sys/net/ipv4/conf/$INT_IF/proxy_arp
+        echo $enable > /proc/sys/net/ipv4/conf/$EXT_IF/forwarding
+        echo $enable > /proc/sys/net/ipv4/conf/$INT_IF/forwarding
     fi
     # Enable ipv6 flags
     if [ "$2" == "ipv6" ] || [ "$2" == "" ]; then
         echo -e "\tConfguring ipv6 flags"
-#        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/accept_ra
-#        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/accept_ra
-#        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/forwarding
-#        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/forwarding
-#        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/proxy_ndp
-#        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/proxy_ndp
+        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/accept_ra
+        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/accept_ra
+        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/forwarding
+        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/forwarding
+        echo $enable > /proc/sys/net/ipv6/conf/$EXT_IF/proxy_ndp
+        echo $enable > /proc/sys/net/ipv6/conf/$INT_IF/proxy_ndp
     fi
     echo ""
 
@@ -86,9 +86,9 @@ manage () {
             if [ -n "$addr4" ]; then
                 echo -e "\t$machine \t $addr4"
 
-#                ip route $action $addr4 dev $INT_IF
+                ip route $action $addr4 dev $INT_IF
                 # Refresh Burrus's ARP cache
-#                arp_ping_the_router $addr4
+                arp_ping_the_router $addr4
             else
                 echo -e "\tWarning: No A record for $machine" >&2
             fi
@@ -98,7 +98,7 @@ manage () {
             if [ -n "$addr6" ]; then
                 echo -e "\t$machine \t $addr6"
                 
-#                ip -6 route $action $addr6 dev $INT_IF
+                ip -6 route $action $addr6 dev $INT_IF
             else
                 echo -e "\tWarning: No AAAA record for $machine" >&2
             fi
