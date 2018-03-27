@@ -3,7 +3,7 @@ Description=pew's arp_ndp_proxy thing
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/arp_ndp_proxy start
+ExecStart=/usr/local/bin/arp_ndp_proxy.sh start
 
 [Install]
 WantedBy=default.target
