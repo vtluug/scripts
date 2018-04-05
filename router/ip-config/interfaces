@@ -1,0 +1,20 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+
+# External v4
+auto enp2s0
+iface enp2s0 inet static
+	address 128.173.88.191/22
+	gateway 128.173.88.1
+
+# Internal v4
+auto enp4s0
+iface enp4s0 inet static
+    address 10.98.0.1/16
+
+# v6 TODO

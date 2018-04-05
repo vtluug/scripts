@@ -1,0 +1,9 @@
+[Unit]
+Description=pew's arp_proxy thing
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/arp_proxy.sh start
+
+[Install]
+WantedBy=default.target

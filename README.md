@@ -1,6 +1,9 @@
 # Scripts
 Scripts for various things
 
+These scripts are written specifically for using joey as the router
+
+
 ## Ldap
 I have no idea what this is for. TODO: remove
 

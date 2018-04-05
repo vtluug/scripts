@@ -1,0 +1,9 @@
+[Unit]
+Description=VTLUUG iptables
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/vtluug_iptables.sh start
+
+[Install]
+WantedBy=default.target
