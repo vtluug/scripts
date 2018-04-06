@@ -1,6 +1,7 @@
 [Unit]
 Description=pew's arp_proxy thing
 After=network.target
+PartOf=networking.service
 
 [Service]
 ExecStart=/usr/local/bin/arp_proxy.sh start
