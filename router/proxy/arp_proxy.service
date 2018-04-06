@@ -5,6 +5,8 @@ PartOf=networking.service
 
 [Service]
 ExecStart=/usr/local/bin/arp_proxy.sh start
+ExecStop=/usr/local/bin/arp_proxy.sh stop
+
 
 [Install]
 WantedBy=default.target
