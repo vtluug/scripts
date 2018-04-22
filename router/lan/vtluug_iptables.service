@@ -3,7 +3,7 @@ Description=VTLUUG iptables
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/vtluug_iptables.sh start
+ExecStart=/usr/local/bin/vtluug_iptables.sh
 
 [Install]
 WantedBy=default.target
