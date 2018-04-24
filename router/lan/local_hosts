@@ -1,21 +1,27 @@
 #<ip-address>       <hostname.domain.org>           <hostname>
 # Bare metal hosts
-10.98.0.1      joey.private.vtluug.org              # Rackable Systems #1
-10.98.0.2      meltdown.private.vtluug.org          # R620 #1
-10.98.0.3      spectre.private.vtluug.org           # R620 #2
-10.98.0.4      phantomphreak.private.vtluug.org     # Rackable Systems #2
-10.98.0.5      cyberdelia.private.vtluug.org        # 2900 #1
-10.98.0.6      ryzenfall.private.vtluug.org         # 2900 #2
-10.98.0.7      fallout.private.vtluug.org           # R310
+10.98.0.1       joey.private.vtluug.org             # Rackable Systems #1
+10.98.0.2       meltdown.private.vtluug.org         # R620 #1
+10.98.0.3       spectre.private.vtluug.org          # R620 #2
+10.98.0.4       phantomphreak.private.vtluug.org    # Rackable Systems #2
+10.98.0.5       cyberdelia.private.vtluug.org       # 2900 #1
+10.98.0.6       ryzenfall.private.vtluug.org        # 2900 #2
+10.98.0.7       fallout.private.vtluug.org          # R310
+10.98.0.8       wood.private.vtluug.org             # Wood
+
 # VMs
-10.98.0.8      chimera.private.vtluug.org           # FreeIPA
-10.98.0.9      sczi.private.vtluug.org              # Web
-10.98.0.10     acidburn.private.vtluug.org          # Shell
-10.98.0.11     theplague.private.vtluug.org         # Rsyslog
-10.98.0.12     holeybeep.private.vtluug.org         # Jitsi
-10.98.0.13     wannacry.private.vtluug.org          # Emby
-10.98.0.14     mirror.private.vtluug.org            # Mirror
-10.98.0.15     zerocool.private.vtluug.org          # Syncthing
-10.98.0.16     crashoverride.private.vtluug.org     # Tahoe-LAFS
-10.98.0.17     wargame.private.vtluug.org           # Wargame
-10.98.0.18     map.private.vtluug.org               # OSM
+10.98.0.9       chimera.private.vtluug.org          # FreeIPA
+10.98.0.10      sczi.private.vtluug.org             # Web
+10.98.0.11      acidburn.private.vtluug.org         # Shell
+10.98.0.12      theplague.private.vtluug.org        # Rsyslog
+10.98.0.13      holeybeep.private.vtluug.org        # Jitsi
+10.98.0.14      wannacry.private.vtluug.org         # Emby
+10.98.0.15      mirror.private.vtluug.org           # Mirror
+10.98.0.16      zerocool.private.vtluug.org         # Syncthing
+10.98.0.17      crashoverride.private.vtluug.org    # Tahoe-LAFS
+10.98.0.18      wargame.private.vtluug.org          # Wargame
+10.98.0.19      map.private.vtluug.org              # OSM
+
+# Non-luug bare metal hosts
+10.98.0.254     mjh.private.vtluug.org              # Mjh
+10.98.0.253     pew.private.vtluug.org              # pew
