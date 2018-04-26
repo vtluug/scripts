@@ -16,9 +16,9 @@
 10.98.0.12      acidburn.private.vtluug.org         acidburn        # Shell
 10.98.0.13      theplague.private.vtluug.org        theplague       # Rsyslog
 10.98.0.14      holeybeep.private.vtluug.org        holeybeep       # Jitsi
-10.98.0.14      wannacry.private.vtluug.org         wannacry        # Emby
+10.98.0.15      wannacry.private.vtluug.org         wannacry        # Emby
 10.98.0.15      mirror.private.vtluug.org           mirror          # Mirror
-10.98.0.16      zerocool.private.vtluug.org         zerocool        # Syncthing
+10.98.0.17      zerocool.private.vtluug.org         zerocool        # Syncthing
 10.98.0.18      crashoverride.private.vtluug.org    crashoverride   # Tahoe-LAFS
 10.98.0.19      wargame.private.vtluug.org          wargame         # Wargame
 10.98.0.20      map.private.vtluug.org              map             # OSM
