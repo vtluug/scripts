@@ -8,7 +8,7 @@
 10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1
 10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2
 10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310
-10.98.0.9       wood.private.vtluug.org             wood            # Wood
+10.98.0.9       wood.private.vtluug.org             wood            # Wood REMOVE
 
 # VMs
 10.98.0.10      chimera.private.vtluug.org          chimera         # FreeIPA
@@ -25,4 +25,4 @@
 
 # Non-luug bare metal hosts
 10.98.0.254     mjh.private.vtluug.org              mjh             # Mjh
-10.98.0.253     pew.private.vtluug.org              pew             # pew
+10.98.0.253     pew.private.vtluug.org              pew             # pew REMOVE

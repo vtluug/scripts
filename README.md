@@ -4,11 +4,20 @@ Scripts for various things
 These scripts are written specifically for using joey as the router
 
 
-## Ldap
-I have no idea what this is for. TODO: remove
+## Router
+This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
 
-## router
-This sets up VTLUUG's router (temp88191.vtluug.org). ARP/NDP Proxying are requried due to port security.
-- ipv4/Nat sets up ARP proxying
-- [npd6](http://npd6.github.io/npd6/) in conjunction with ipv6/ndp6.conf to proxy NDP
-- ipv6/setup_ipv6.sh to set up IPv6 routes
+- router/ip-config
+    - Typical /etc/network/interfaces config for the router
+- router/firewall
+    - firewall rules (TODO)
+- router/ipsec
+    - ipsec configuration (TODO)
+- router/ipv4
+    - Old scripts (TODO: REMOVE)
+- router/ipv6
+    - ipv6 configuration (TODO: REMOVE)
+- router/lan
+    - dnsmasq & nat configuration
+- router/proxy
+    - arp proxying
