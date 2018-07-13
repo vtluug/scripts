@@ -1,6 +1,8 @@
 # Scripts
 Scripts for various things
 
+**See router/lan/local_hosts for a listing of ips & hosts**
+
 These scripts are written specifically for using joey as the router
 
 
