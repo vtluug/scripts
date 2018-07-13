@@ -1,28 +1,53 @@
-#<ip-address>       <hostname.domain.org>           <hostname>
+#<ip-address>       <hostname.domain.org>           <hostname>      <name>                  <mac>
+# v4 + name + mac
 # Bare metal hosts
-10.98.0.1       joey.private.vtluug.org             joey            # Rackable Systems #1
-10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824
-10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1
-10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2
-10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2
-10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1
-10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2
-10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310
+10.98.0.1       joey.private.vtluug.org             joey            # Rackable Systems #1   00:22:15:ef:07:a5
+10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824             00:12:a9:d5:d4:20
+10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               90:b1:1c:54:cd:72
+10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               90:b1:1c:03:e7:aa
+10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2   00:22:15:ef:05:3d
+10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1               00:15:17:6a:e0:98
+10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2               TODO
+10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310                  00:15:17:12:76:70
 10.98.0.9       wood.private.vtluug.org             wood            # Wood REMOVE
 
 # VMs
-10.98.0.10      chimera.private.vtluug.org          chimera         # FreeIPA
-10.98.0.11      sczi.private.vtluug.org             sczi            # Web
-10.98.0.12      acidburn.private.vtluug.org         acidburn        # Shell
-10.98.0.13      theplague.private.vtluug.org        theplague       # Rsyslog
-10.98.0.14      holeybeep.private.vtluug.org        holeybeep       # Jitsi
-10.98.0.15      wannacry.private.vtluug.org         wannacry        # Emby
-10.98.0.16      mirror.private.vtluug.org           mirror          # Mirror
-10.98.0.17      zerocool.private.vtluug.org         zerocool        # Syncthing
-10.98.0.18      crashoverride.private.vtluug.org    crashoverride   # Tahoe-LAFS
-10.98.0.19      wargame.private.vtluug.org          wargame         # Wargame
-10.98.0.20      map.private.vtluug.org              map             # OSM
+10.98.0.10      chimera.private.vtluug.org          chimera         # FreeIPA               00:02:0a:62:00:0a
+10.98.0.11      sczi.private.vtluug.org             sczi            # Web                   00:02:0a:62:00:0b
+10.98.0.12      acidburn.private.vtluug.org         acidburn        # Shell                 00:02:0a:62:00:0c
+10.98.0.13      theplague.private.vtluug.org        theplague       # Rsyslog/ELK           00:02:0a:62:00:0d
+10.98.0.14      holeybeep.private.vtluug.org        holeybeep       # Jitsi                 00:02:0a:62:00:0e
+10.98.0.15      wannacry.private.vtluug.org         wannacry        # Emby                  00:02:0a:62:00:0f
+10.98.0.16      mirror.private.vtluug.org           mirror          # Mirror                00:02:0a:62:00:10
+10.98.0.17      zerocool.private.vtluug.org         zerocool        # Syncthing             00:02:0a:62:00:11
+10.98.0.18      crashoverride.private.vtluug.org    crashoverride   # Tahoe-LAFS            00:02:0a:62:00:12
+10.98.0.19      wargame.private.vtluug.org          wargame         # Wargame               00:02:0a:62:00:13
+10.98.0.20      map.private.vtluug.org              map             # OSM                   00:02:0a:62:00:14
 
 # Non-luug bare metal hosts
 10.98.0.254     mjh.private.vtluug.org              mjh             # Mjh
 10.98.0.253     pew.private.vtluug.org              pew             # pew REMOVE
+
+# v6
+# Bare metal
+2001:468:c80:6103:0211:43ff:fe30:0a72     joey
+2001:468:c80:6103:0012:a9ff:fed5:d420     switch
+2001:468:c80:6103:90b1:1cff:fe54:cd72     meltdown
+2001:468:c80:6103:90b1:1cff:fe03:e7aa     spectre
+2001:468:c80:6103:0022:15ff:feef:053d     phantomphreak
+2001:468:c80:6103:0015:17ff:fe6a:e098     cyberdelia
+#2001:468:c80:6103:TODO                   dirtycow
+2001:468:c80:6103:0015:17ff:fe12:7670     shellshock
+
+# VMs
+2001:468:c80:6103:0002:0aff:fe62:000a     chimera
+2001:468:c80:6103:0002:0aff:fe62:000b     sczi
+2001:468:c80:6103:0002:0aff:fe62:000c     acidburn
+2001:468:c80:6103:0002:0aff:fe62:000d     theplague
+2001:468:c80:6103:0002:0aff:fe62:000e     holeybeep
+2001:468:c80:6103:0002:0aff:fe62:000f     wannacry
+2001:468:c80:6103:0002:0aff:fe62:0010     mirror
+2001:468:c80:6103:0002:0aff:fe62:0011     zerocool
+2001:468:c80:6103:0002:0aff:fe62:0012     crashoverride
+2001:468:c80:6103:0002:0aff:fe62:0013     wargame
+2001:468:c80:6103:0002:0aff:fe62:0014     map
