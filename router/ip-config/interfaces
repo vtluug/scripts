@@ -12,7 +12,7 @@ iface enp2s0 inet static
 #    address 128.173.88.191/22
 # Temp for nested nat
     address 128.173.89.246/22
-	gateway 128.173.88.1
+    gateway 128.173.88.1
 
 #iface enp2s0 inet6 static
 #    address 2001:468:c80:6103:211:43ff:fe30:a72/64
