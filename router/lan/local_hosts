@@ -5,11 +5,11 @@
 10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824             00:12:a9:d5:d4:20
 10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               90:b1:1c:54:cd:72
 10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               90:b1:1c:03:e7:aa
-10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2   00:22:15:ef:05:3d
+10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2 TODO REMOVE
 10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1               00:15:17:6a:e0:98
 10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2               TODO
 10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310                  00:15:17:12:76:70
-10.98.0.9       wood.private.vtluug.org             wood            # Wood REMOVE
+10.98.0.9       wood.private.vtluug.org             wood            # Wood TODO REMOVE
 
 # VMs
 10.98.0.10      chimera.private.vtluug.org          chimera         # FreeIPA               00:02:0a:62:00:0a
@@ -26,7 +26,7 @@
 
 # Non-luug bare metal hosts
 10.98.0.254     mjh.private.vtluug.org              mjh             # Mjh
-10.98.0.253     pew.private.vtluug.org              pew             # pew REMOVE
+10.98.0.253     pew.private.vtluug.org              pew             # pew TODO REMOVE
 
 # v6
 # Bare metal
@@ -34,7 +34,6 @@
 2001:468:c80:6103:0012:a9ff:fed5:d420     switch
 2001:468:c80:6103:90b1:1cff:fe54:cd72     meltdown
 2001:468:c80:6103:90b1:1cff:fe03:e7aa     spectre
-2001:468:c80:6103:0022:15ff:feef:053d     phantomphreak
 2001:468:c80:6103:0015:17ff:fe6a:e098     cyberdelia
 #2001:468:c80:6103:TODO                   dirtycow
 2001:468:c80:6103:0015:17ff:fe12:7670     shellshock
