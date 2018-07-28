@@ -3,8 +3,8 @@
 # Bare metal hosts
 10.98.0.1       joey.private.vtluug.org             joey            # Rackable Systems #1   00:22:15:ef:07:a5
 10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824             00:12:a9:d5:d4:20
-10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               90:b1:1c:54:cd:72
-10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               90:b1:1c:03:e7:aa
+10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               00:02:0a:62:00:03
+10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               00:02:0a:62:00:04
 10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2 TODO REMOVE
 10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1               00:15:17:6a:e0:98
 10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2               TODO
