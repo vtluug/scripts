@@ -23,3 +23,8 @@ This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due t
     - dnsmasq & nat configuration
 - router/proxy
     - arp proxying
+
+## Libvirt-hosts
+Sets up the bridge interfaces on new libvirt hosts. This should be the first thing done after a new installation.
+
+Make sure you change $INTERFACE the interface that is being bridged.

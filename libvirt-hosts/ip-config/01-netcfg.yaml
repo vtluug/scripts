@@ -1,0 +1,10 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    $INTERFACE:
+      dhcp4: no
+  bridges:
+    br0:
+      interfaces: [$INTERFACE]
+      dhcp4: true
