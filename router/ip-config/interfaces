@@ -10,11 +10,11 @@ iface lo inet loopback
 auto enp2s0
 iface enp2s0 inet static
 #    address 128.173.88.191/22
-# Temp for nested nat
+# Temp for nested nat TODO
     address 128.173.89.246/22
     gateway 128.173.88.1
 
-#iface enp2s0 inet6 static
+#iface enp2s0 inet6 static TODO
 #    address 2001:468:c80:6103:211:43ff:fe30:a72/64
 #    gateway fe80::82ac:ac01:2fee:7af0
 
@@ -23,6 +23,7 @@ auto enp4s0
 iface enp4s0 inet static
     address 10.98.0.1/16
 
-#iface enp4s0 inet6 static
-#    address 2607:b400:0006:cc80::1/64
+iface enp4s0 inet6 static
+    address 2607:b400:0006:cc80::1/64
+# TODO
 #    post-up ip route -6 add 2607:b400:0006:cc80:: via 2001:468:c80:6103:211:43ff:fe30:a72
