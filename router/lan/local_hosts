@@ -5,7 +5,6 @@
 10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824             00:12:a9:d5:d4:20
 10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               Not known ahead of time TODO bug
 10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               Not known ahead of time TODO bug
-10.98.0.5       phantomphreak.private.vtluug.org    phantomphreak   # Rackable Systems #2 TODO REMOVE
 10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1               00:15:17:6a:e0:98
 10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2               TODO
 10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310                  00:15:17:12:76:70
