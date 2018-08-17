@@ -26,6 +26,7 @@ cyberdelia.vtluug.org
 acidburn.vtluug.org
 razor.vtluug.org
 luug4.ece.vt.edu
+luug5.ece.vt.edu
 ')
 
 # Attempt to do an "Unsolicited ARP" to the Burris router
@@ -86,3 +87,12 @@ case $1 in
         echo "Usage: $0 {start|stop}"
         exit 1
 esac
+
+# TEMP TODO
+sysctl -w net.ipv6.conf.all.proxy_ndp=1
+for machine in $MACHINES; do
+    addr6=$(dig $machine +short aaaa | tail -n 1)
+    if [ -n "$addr6" ]; then
+        ip -6 neigh add proxy $addr6 dev enp2s0
+    fi
+done
