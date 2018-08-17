@@ -10,8 +10,6 @@ iface lo inet loopback
 auto enp2s0
 iface enp2s0 inet static
     address 128.173.88.191/22
-# Temp for nested nat TODO
-#    address 128.173.89.246/22
     gateway 128.173.88.1
 
 # TODO
