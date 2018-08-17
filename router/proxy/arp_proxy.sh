@@ -8,13 +8,8 @@
 # author: pew <paul@walko.org> (2018-03-26)
 ####################################################################
 
-# Use correct arping
+# Needed since arping syntax differs between distros
 OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
-if [ "$OS_RELEASE" == "Debian GNU/Linux" ]; then
-    ARPING='arping -q -i $EXT_IF -U -c 2 -S $1 $ARPING_HOST'
-else
-    ARPING='arping -q -I $EXT_IF -U -c 2 -s $1 $ARPING_HOST'
-fi
 
 # Make sure path is proper
 export PATH=/sbin:/usr/sbin:${PATH}
@@ -40,7 +35,11 @@ luug5.ece.vt.edu
 # Attempt to do an "Unsolicited ARP" to the Burris router
 arp_ping_the_router () {
     echo 1 > /proc/sys/net/ipv4/ip_nonlocal_bind
-    $ARPING >& 2
+	if [ "$OS_RELEASE" == "\"Debian GNU/Linux\"" ]; then
+	    arping -q -i $EXT_IF -U -c 2 -S $1 $ARPING_HOST
+	else
+	    arping -q -I $EXT_IF -U -c 2 -s $1 $ARPING_HOST
+	fi
     echo 0 > /proc/sys/net/ipv4/ip_nonlocal_bind
 }
 
@@ -81,7 +80,7 @@ manage () {
             # Refresh Burrus's ARP cache
             arp_ping_the_router $addr4
         else
-            echo -e "\tWarning: No A record for $machine" >&2
+            echo -e "\tWarning: No A record for $machine"
         fi
     done
 }
@@ -95,12 +94,3 @@ case $1 in
         echo "Usage: $0 {start|stop}"
         exit 1
 esac
-
-# TEMP TODO
-sysctl -w net.ipv6.conf.all.proxy_ndp=1
-for machine in $MACHINES; do
-    addr6=$(dig $machine +short aaaa | tail -n 1)
-    if [ -n "$addr6" ]; then
-        ip -6 neigh add proxy $addr6 dev enp2s0
-    fi
-done
