@@ -8,6 +8,14 @@
 # author: pew <paul@walko.org> (2018-03-26)
 ####################################################################
 
+# Use correct arping
+OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
+if [ "$OS_RELEASE" == "Debian GNU/Linux" ]; then
+    ARPING='arping -q -i $EXT_IF -U -c 2 -S $1 $ARPING_HOST'
+else
+    ARPING='arping -q -I $EXT_IF -U -c 2 -s $1 $ARPING_HOST'
+fi
+
 # Make sure path is proper
 export PATH=/sbin:/usr/sbin:${PATH}
 
@@ -32,7 +40,7 @@ luug5.ece.vt.edu
 # Attempt to do an "Unsolicited ARP" to the Burris router
 arp_ping_the_router () {
     echo 1 > /proc/sys/net/ipv4/ip_nonlocal_bind
-    arping -q -I $EXT_IF -U -c 2 -s $1 $ARPING_HOST >&2
+    $ARPING >& 2
     echo 0 > /proc/sys/net/ipv4/ip_nonlocal_bind
 }
 
