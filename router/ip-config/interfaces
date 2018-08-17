@@ -5,24 +5,21 @@
 auto lo
 iface lo inet loopback
 
-
 # External
 auto enp2s0
 iface enp2s0 inet static
     address 128.173.88.191/22
     gateway 128.173.88.1
 
-# TODO
-#iface enp2s0 inet6 static
-#    address 2001:468:c80:6103:211:43ff:fe30:a72/64
-#    gateway fe80::82ac:ac01:2fee:7af0
+iface enp2s0 inet6 static
+    address 2001:468:c80:6103:211:43ff:fe30:a72/64
+    gateway fe80::82ac:ac01:2fee:7af0
 
 # Internal
 auto enp4s0
 iface enp4s0 inet static
     address 10.98.0.1/16
 
-#iface enp4s0 inet6 static
-#    address 2607:b400:0006:cc80::1/64
-# TODO
-#    post-up ip -6 route add 2607:b400:0006:cc80:: via 2001:468:c80:6103:211:43ff:fe30:a72
+iface enp4s0 inet6 static
+    address 2607:b400:0006:cc80::1/64
+    post-up echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
