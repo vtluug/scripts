@@ -3,8 +3,8 @@
 # Bare metal hosts
 10.98.0.1       joey.private.vtluug.org             joey            # Rackable Systems #1   00:22:15:ef:07:a5
 10.98.0.2       switch.private.vtluug.org           switch          # 3com 3824             00:12:a9:d5:d4:20
-10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               Not known ahead of time
-10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               Not known ahead of time
+10.98.0.3       meltdown.private.vtluug.org         meltdown        # R620 #1               00:02:0a:62:00:03
+10.98.0.4       spectre.private.vtluug.org          spectre         # R620 #2               00:02:0a:62:00:04
 10.98.0.6       cyberdelia.private.vtluug.org       cyberdelia      # 2900 #1               00:15:17:6a:e0:98
 10.98.0.7       dirtycow.private.vtluug.org         dirtycow        # 2900 #2               TODO
 10.98.0.8       shellshock.private.vtluug.org       shellshock      # R310                  00:15:17:12:76:70
@@ -23,29 +23,29 @@
 10.98.0.20      map.private.vtluug.org              map             # OSM                   00:02:0a:62:00:14
 
 # Non-luug bare metal hosts
-10.98.0.254     mjh.private.vtluug.org              mjh             # Mjh
+10.98.0.254     mjh.private.vtluug.org              mjh             # Mjh                   00:30:48:7e:28:da
 
 # v6
 # Bare metal
-2607:b400:0006:cc80:0001:1089:c0de:3478     joey
-2607:b400:0006:cc80:0001:10ec:c82f:bae5     meltdown
-2607:b400:0006:cc80:0001:101d:b47b:177a     spectre
-2607:b400:0006:cc80:0001:107e:33b0:adb7     cyberdelia
-2607:b400:0006:cc80:0001:1018:6e89:71a8     dirtycow
-2607:b400:0006:cc80:0001:102b:28bc:a03d     shellshock
+2001:0468:0c80:6103:0211:43ff:fe30:0a72     joey
+2607:b400:0006:cc80:0002:0aff:fe62:0003     meltdown
+2607:b400:0006:cc80:0002:0aff:fe62:0004     spectre
+2607:b400:0006:cc80:0015:17ff:fe6a:e098     cyberdelia
+2607:b400:0006:cc80:TODO                  dirtycow
+2607:b400:0006:cc80:0015:17ff:fe12:7670     shellshock
 
 # VMs
-2607:b400:0006:cc80:0001:1038:507a:b1cf     chimera
-2607:b400:0006:cc80:0001:1053:d839:7665     sczi
-2607:b400:0006:cc80:0001:1028:02b4:c626     acidburn
-2607:b400:0006:cc80:0001:1059:7739:366e     theplague
-2607:b400:0006:cc80:0001:1093:18fa:4ef7     holeybeep
-2607:b400:0006:cc80:0001:108f:0b95:f9c4     wannacry
-2607:b400:0006:cc80:0001:102f:023a:9d33     mirror
-2607:b400:0006:cc80:0001:1097:66be:f3f7     zerocool
-2607:b400:0006:cc80:0001:1001:d268:d306     crashoverride
-2607:b400:0006:cc80:0001:10ac:87c0:2a88     wargame
-2607:b400:0006:cc80:0001:1091:ff78:d124     map
+2607:b400:0006:cc80:0002:0aff:fe62:000a     chimera
+2607:b400:0006:cc80:0002:0aff:fe62:000b     sczi
+2607:b400:0006:cc80:0002:0aff:fe62:000c     acidburn
+2607:b400:0006:cc80:0002:0aff:fe62:000d     theplague
+2607:b400:0006:cc80:0002:0aff:fe62:000e     holeybeep
+2607:b400:0006:cc80:0002:0aff:fe62:000f     wannacry
+2607:b400:0006:cc80:0002:0aff:fe62:0010     mirror
+2607:b400:0006:cc80:0002:0aff:fe62:0011     zerocool
+2607:b400:0006:cc80:0002:0aff:fe62:0012     crashoverride
+2607:b400:0006:cc80:0002:0aff:fe62:0013     wargame
+2607:b400:0006:cc80:0002:0aff:fe62:0014     map
 
 # Non-luug bare metal hosts
-2607:b400:0006:cc80:0001:10e9:86fc:8edf     mjh
+2607:b400:0006:cc80:0030:48ff:fe7e:28da     mjh
