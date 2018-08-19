@@ -30,9 +30,9 @@
 2001:0468:0c80:6103:0211:43ff:fe30:0a72     joey
 2607:b400:0006:cc80:0200:0aff:fe62:0003     meltdown
 2607:b400:0006:cc80:0200:0aff:fe62:0004     spectre
-2607:b400:0006:cc80:0015:17ff:fe6a:e098     cyberdelia
+2607:b400:0006:cc80:0215:17ff:fe6a:e098     cyberdelia
 2607:b400:0006:cc80:TODO                  dirtycow
-2607:b400:0006:cc80:0015:17ff:fe12:7670     shellshock
+2607:b400:0006:cc80:0215:17ff:fe12:7670     shellshock
 
 # VMs
 2607:b400:0006:cc80:0200:0aff:fe62:000a     chimera
@@ -48,4 +48,4 @@
 2607:b400:0006:cc80:0200:0aff:fe62:0014     map
 
 # Non-luug bare metal hosts
-2607:b400:0006:cc80:0030:48ff:fe7e:28da     mjh
+2607:b400:0006:cc80:0230:48ff:fe7e:28da     mjh
