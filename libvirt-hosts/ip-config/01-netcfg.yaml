@@ -7,5 +7,5 @@ network:
   bridges:
     br0:
       macaddress: $MAC # Look up in local_hosts
-      dhcp4: true
+      dhcp4: yes
       interfaces: [$INTERFACE]
