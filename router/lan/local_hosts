@@ -43,9 +43,9 @@
 2607:b400:0006:cc80:0000:0aff:fe62:000f     wannacry
 2607:b400:0006:cc80:0000:0aff:fe62:0010     mirror
 2607:b400:0006:cc80:0000:0aff:fe62:0011     zerocool
-2607:b400:0006:cc80:0000:0aff:fe62:0012     crashoverride
-2607:b400:0006:cc80:0000:0aff:fe62:0013     wargame
-2607:b400:0006:cc80:0000:0aff:fe62:0014     map
+2607:b400:0006:cc80:0000:0aff:fe62:0012     crashoverride # temporarily sczi
+2607:b400:0006:cc80:0000:0aff:fe62:0013     wargame       # temporarily acidburn
+2607:b400:0006:cc80:0000:0aff:fe62:0014     map           # temporarily razor
 
 # Non-luug bare metal hosts
 2607:b400:0006:cc80:0230:48ff:fe7e:28da     mjh
