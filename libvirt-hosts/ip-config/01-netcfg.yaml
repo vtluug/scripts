@@ -6,6 +6,7 @@ network:
       dhcp4: no
   bridges:
     br0:
-      macaddress: $MAC # Look up in local_hosts
-      dhcp4: yes
       interfaces: [$INTERFACE]
+      macaddress: $MAC # Look up in local_hosts
+#      addresses:  [$GLOBAL_V4/22] # Only if applicable
+      dhcp4: yes
