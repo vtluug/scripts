@@ -11,6 +11,8 @@ This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due t
 
 - router/ip-config
     - Typical /etc/network/interfaces config for the router
+- router/sysctl.conf
+    - Sysctl settings for enabling IPv6 privacy extensions and forwarding
 - router/firewall
     - firewall rules (TODO)
 - router/ipsec
