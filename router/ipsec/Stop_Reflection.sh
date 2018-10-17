@@ -6,66 +6,66 @@ protocols_to_block="20       21  23     52  88       109  110  111     135    13
 
 
 valid_ranges='
-	128.173.0.0/16
-	198.82.0.0/16
+    128.173.0.0/16
+    198.82.0.0/16
 
-	10.0.0.0/8
-	172.16.0.0/12
-	192.168.0.0/16
+    10.0.0.0/8
+    172.16.0.0/12
+    192.168.0.0/16
 
-	198.18.0.0/15
-	198.51.100.0/24
+    198.18.0.0/15
+    198.51.100.0/24
 
-	127.0.0.0/8
+    127.0.0.0/8
 '
 
 if [[ ${1} = "start" ]] ; then
 
-	/sbin/iptables --new-chain REFLECTION_source
-	/sbin/iptables --new-chain REFLECTION_destination
+    /sbin/iptables --new-chain REFLECTION_source
+    /sbin/iptables --new-chain REFLECTION_destination
 
-	for range in ${valid_ranges} ; do
-	    /sbin/iptables --append REFLECTION_source --source ${range} --jump REFLECTION_destination
-	done
-	/sbin/iptables --append REFLECTION_source                       --jump DROP
+    for range in ${valid_ranges} ; do
+        /sbin/iptables --append REFLECTION_source --source ${range} --jump REFLECTION_destination
+    done
+    /sbin/iptables --append REFLECTION_source                       --jump DROP
 
-	for range in ${valid_ranges} ; do
-	    /sbin/iptables --append REFLECTION_destination --destination ${range} --jump ACCEPT
-	done
-	/sbin/iptables --append REFLECTION_destination                            --jump DROP
+    for range in ${valid_ranges} ; do
+        /sbin/iptables --append REFLECTION_destination --destination ${range} --jump ACCEPT
+    done
+    /sbin/iptables --append REFLECTION_destination                            --jump DROP
 
-	for p in ${protocols_to_block} ; do
-	    /sbin/iptables --insert INPUT   1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --insert OUTPUT  1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --insert FORWARD 1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --insert INPUT   1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --insert OUTPUT  1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --insert FORWARD 1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	done
+    for p in ${protocols_to_block} ; do
+        /sbin/iptables --insert INPUT   1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --insert OUTPUT  1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --insert FORWARD 1 --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --insert INPUT   1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --insert OUTPUT  1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --insert FORWARD 1 --protocol UDP --destination-port ${p} --jump REFLECTION_source
+    done
 
 elif [[ ${1} = "stop" ]] ; then
 
-	for p in ${protocols_to_block} ; do
-	    /sbin/iptables --delete INPUT   --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --delete OUTPUT  --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --delete FORWARD --protocol TCP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --delete INPUT   --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --delete OUTPUT  --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	    /sbin/iptables --delete FORWARD --protocol UDP --destination-port ${p} --jump REFLECTION_source
-	done
+    for p in ${protocols_to_block} ; do
+        /sbin/iptables --delete INPUT   --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --delete OUTPUT  --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --delete FORWARD --protocol TCP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --delete INPUT   --protocol UDP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --delete OUTPUT  --protocol UDP --destination-port ${p} --jump REFLECTION_source
+        /sbin/iptables --delete FORWARD --protocol UDP --destination-port ${p} --jump REFLECTION_source
+    done
 
-	for range in ${valid_ranges} ; do
-	    /sbin/iptables --delete REFLECTION_destination --destination ${range} --jump ACCEPT
-	done
-	/sbin/iptables --delete REFLECTION_destination                            --jump DROP
+    for range in ${valid_ranges} ; do
+        /sbin/iptables --delete REFLECTION_destination --destination ${range} --jump ACCEPT
+    done
+    /sbin/iptables --delete REFLECTION_destination                            --jump DROP
 
-	for range in ${valid_ranges} ; do
-	    /sbin/iptables --delete REFLECTION_source --source ${range} --jump REFLECTION_destination
-	done
-	/sbin/iptables --delete REFLECTION_source                       --jump DROP
+    for range in ${valid_ranges} ; do
+        /sbin/iptables --delete REFLECTION_source --source ${range} --jump REFLECTION_destination
+    done
+    /sbin/iptables --delete REFLECTION_source                       --jump DROP
 
-	/sbin/iptables --delete-chain REFLECTION_source
-	/sbin/iptables --delete-chain REFLECTION_destination
+    /sbin/iptables --delete-chain REFLECTION_source
+    /sbin/iptables --delete-chain REFLECTION_destination
 else
     echo "Usage: ${0} [start|stop]"
 fi
