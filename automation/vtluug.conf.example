@@ -1,0 +1,20 @@
+urls:
+    calendar: https://www.google.com/calendar/embed?src=vtluug%40gmail.com&ctz=America/New_York
+
+feeds:
+    calendar: https://www.google.com/calendar/ical/vtluug%40gmail.com/public/basic.ics
+    identica: https://identi.ca/api/statuses/user_timeline/118799.atom
+    list-vtluug-announce: https://listserv.vt.edu/cgi-bin/wa?RSS&L=VTLUUG-ANNOUNCE&v=ATOM1.0
+    list-vtluug: https://listserv.vt.edu/cgi-bin/wa?RSS&L=VTLUUG&v=ATOM1.0
+
+feed_output:
+    calendar: /srv/http/vtluug.org/calendar.ics
+    identica: /srv/http/vtluug.org/identica.atom
+    list-vtluug-announce: /srv/http/vtluug.org/vtluug-announce.atom
+    list-vtluug: /srv/http/vtluug.org/vtluug.atom
+
+wiki:
+    api: https://vtluug.org/w/api.php
+    domain: VTLUUG
+    username: SpamBot
+    password: 

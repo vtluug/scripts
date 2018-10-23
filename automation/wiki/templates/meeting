@@ -1,0 +1,14 @@
+== Date, Time and Location ==
+* {{ date|dateformat("%A, %B %-d, %Y") }}
+* {{ date|dateformat("%H:%M") }} - {{ dateend|dateformat("%H:%M") }}
+* {{ room }} [[gp:{{ building }}|{{ building }}]]
+
+== Open Source News ==
+
+== VTLUUG Announcements ==
+
+== Technical Talks & General Discussion ==
+
+== Hacking & Projects ==
+
+[[Category:VTLUUG:Meetings]]

@@ -1,0 +1,3 @@
+''Also see our [{{ fullurl }} full calendar] and [[VTLUUG:Past events|past events]].''
+
+* Our [[VTLUUG:Next meeting|next meeting]] will be on {{ date|dateformat('%A, %B %-d') }}.

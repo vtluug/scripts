@@ -1,0 +1,13 @@
+[Unit]
+Description=luug firewall scripts
+After=network.target
+PartOf=networking.service
+
+[Service]
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/luug_firewall.sh start
+ExecStop=/usr/local/bin/luug_firewall.sh stop
+
+
+[Install]
+WantedBy=default.target

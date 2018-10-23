@@ -5,22 +5,25 @@ Scripts for various things
 
 These scripts are written specifically for using joey as the router
 
+Setup instructions can be found at vtluug.org/rtfm.txt
+
 
 ## Router
 This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
 
 - router/ip-config
-    - Typical /etc/network/interfaces config for the router
-- router/sysctl.conf
-    - Sysctl settings for enabling IPv6 privacy extensions and forwarding
-- router/firewall
-    - firewall rules (TODO)
+    - typical /etc/network/interfaces config for the router
 - router/ipsec
     - ipsec configuration (TODO)
+- router/iptables
+    - Router iptables rules
 - router/lan
     - dnsmasq & nat configuration
 - router/proxy
     - arp proxying
+- router/sysctl.conf
+    - sysctl settings for enabling IPv6 privacy extensions and forwarding
+
 
 ## Libvirt-hosts
 Sets up the bridge interfaces on new libvirt hosts. This should be the first thing done after a new installation.
