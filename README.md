@@ -9,7 +9,7 @@ Setup instructions can be found at vtluug.org/rtfm.txt
 
 
 ## Router
-This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
+Configuration for VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
 
 - router/ip-config
     - typical /etc/network/interfaces config for the router
@@ -29,3 +29,7 @@ This sets up VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due t
 Sets up the bridge interfaces on new libvirt hosts. This should be the first thing done after a new installation.
 
 Make sure you change $INTERFACE the interface that is being bridged.
+
+
+## Automation
+Wiki, website, and other scripts for automating things.
