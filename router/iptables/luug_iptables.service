@@ -5,8 +5,8 @@ PartOf=networking.service
 
 [Service]
 RemainAfterExit=yes
-ExecStart=/usr/local/bin/luug_firewall.sh start
-ExecStop=/usr/local/bin/luug_firewall.sh stop
+ExecStart=/usr/local/bin/luug_iptables.sh start
+ExecStop=/usr/local/bin/luug_iptables.sh stop
 
 
 [Install]
