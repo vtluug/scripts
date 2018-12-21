@@ -23,13 +23,14 @@ ARPING_HOST=128.173.88.1
 # Machines being proxied
 # Should be same as https://vtluug.org/wiki/Infrastructure:Network
 # luug4 is used instead of mjh bc mjh doesn't work
+# We also have joey.vtluug.org, but that's the router so don't proxy it
 MACHINES=('
-sczi.vtluug.org
-cyberdelia.vtluug.org
-acidburn.vtluug.org
-razor.vtluug.org
 luug4.ece.vt.edu
-luug5.ece.vt.edu
+acidburn.vtluug.org
+chimera.vtluug.org
+cyberdelia.vtluug.org
+meltdown.vtluug.org
+sczi.vtluug.org
 ')
 
 # Attempt to do an "Unsolicited ARP" to the Burris router
