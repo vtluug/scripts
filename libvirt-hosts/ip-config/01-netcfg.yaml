@@ -8,5 +8,6 @@ network:
     br0:
       interfaces: [$INTERFACE]
       macaddress: $MAC # Look up in local_hosts
-#      addresses:  [$GLOBAL_V4/22] # Only if applicable
+      addresses:  [$GLOBAL_V4/22] # Only if applicable
+      gateway4: 128.173.88.1
       dhcp4: yes

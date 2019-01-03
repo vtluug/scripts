@@ -33,3 +33,7 @@ Make sure you change $INTERFACE the interface that is being bridged.
 
 ## Automation
 Wiki, website, and other scripts for automating things.
+
+
+## h200-files
+These files are for flashing a Dell H200 raid controller to HBA mode, which enables it to be a "dumb" adapter and not use Dell's typical fimware.
