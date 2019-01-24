@@ -6,7 +6,7 @@ set -x
 # Block/unblock reflection attacks
 reflection_attacks () {
     #                   ftp-data ftp telnet dns kerberos pop2 pop3 sunrpc  ms-rpc netbios-ns netbios-dgm netbios-ssn snmp snmptrap imap3 ldap microsoft-ds kpasswd printer ipp ldaps kerberls-adm kerberls-iv samba-seat pop3s nfs  mysql rdp  krb524 postgres
-    protocols_to_block='20       21  23     52  88       109  110  111     135    137        138         139         161  162      220   389  445          464     515     631 636   749          750         901        995   2049 3306  3389 4444   5432'
+    protocols_to_block='20       21  23     53  88       109  110  111     135    137        138         139         161  162      220   389  445          464     515     631 636   749          750         901        995   2049 3306  3389 4444   5432'
 
     # Private IP ranges
     valid_ranges='
