@@ -28,7 +28,7 @@ MACHINES=('
 luug4.ece.vt.edu
 acidburn.vtluug.org
 chimera.vtluug.org
-cyberdelia.vtluug.org
+dirtycow.vtluug.org
 meltdown.vtluug.org
 sczi.vtluug.org
 ')
