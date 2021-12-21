@@ -15,15 +15,15 @@ OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 export PATH=/sbin:/usr/sbin:${PATH}
 
 # Set interfaces
-EXT_IF=enp2s0
-INT_IF=enp4s0
+EXT_IF=enp4s0
+INT_IF=enx803f5d086781
 
 ARPING_HOST=128.173.88.1
 
 # Machines being proxied
 # Should be same as https://vtluug.org/wiki/Infrastructure:Network
 # luug4 is used instead of mjh bc mjh doesn't work
-# We also have joey.vtluug.org, but that's the router so don't proxy it
+# We also have shellshock.vtluug.org, but that's the router so don't proxy it
 MACHINES=('
 luug4.ece.vt.edu
 acidburn.vtluug.org

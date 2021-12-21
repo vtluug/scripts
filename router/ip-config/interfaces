@@ -1,24 +1,28 @@
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
+### R310: built-in eth ports are fucked
+# - left (looking at rear) PCI is enp4s0
+# - enx... is a "temp" usb eth adapter
+
 # The loopback network interface
 auto lo
 iface lo inet loopback
 
 # External
-auto enp2s0
-iface enp2s0 inet static
+auto enp4s0
+iface enp4s0 inet static
     address 128.173.88.191/22
     gateway 128.173.88.1
 
-iface enp2s0 inet6 static
+iface enp4s0 inet6 static
     address 2001:468:c80:6103:211:43ff:fe30:a72/64
     gateway fe80::82ac:ac01:2fee:7af0
 
 # Internal
-auto enp4s0
-iface enp4s0 inet static
+auto enx803f5d086781
+iface enx803f5d086781 inet static
     address 10.98.0.1/16
 
-iface enp4s0 inet6 static
+iface enx803f5d086781 inet6 static
     address 2607:b400:0006:cc80::1/64

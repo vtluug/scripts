@@ -51,6 +51,10 @@ reflection_attacks () {
         done
         # }}}
 
+	# Special rules for lora {{{
+            /sbin/iptables -t nat -A PREROUTING -p tcp --dport 44158 -j DNAT --to-destination 10.98.0.253:44158
+        # }}}
+
     elif [ "$1" == "stop" ]; then
 
         # Delete rules to send all protocols to chain {{{
