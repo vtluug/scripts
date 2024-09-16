@@ -31,6 +31,7 @@ chimera.vtluug.org
 dirtycow.vtluug.org
 meltdown.vtluug.org
 sczi.vtluug.org
+sphinx.vtluug.org
 ')
 
 # Attempt to do an "Unsolicited ARP" to the Burris router
