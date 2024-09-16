@@ -15,6 +15,7 @@
 10.98.0.16      mirror.private.vtluug.org        # Mirror                02:00:0a:62:00:10
 10.98.0.18      crashoverride.private.vtluug.org # Tahoe-LAFS            02:00:0a:62:00:12
 10.98.0.19      wargame.private.vtluug.org       # Wargame               02:00:0a:62:00:13
+10.98.0.20      sphinx.vtluug.org                # FreeIPA replica       02:00:0a:62:00:0d
 
 # Non-luug bare metal hosts
 10.98.0.254     mjh.private.vtluug.org           # Mjh                   00:30:48:7e:28:da
