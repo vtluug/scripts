@@ -16,6 +16,7 @@
 10.98.0.18      crashoverride.private.vtluug.org # Tahoe-LAFS            02:00:0a:62:00:12
 10.98.0.19      wargame.private.vtluug.org       # Wargame               02:00:0a:62:00:13
 10.98.0.20      sphinx.vtluug.org                # FreeIPA replica       02:00:0a:62:00:0d
+10.98.0.21      nikonwormhole.vtluug.org         # dns (adguard)         02:00:0a:62:00:0e
 
 # Non-luug bare metal hosts
 10.98.0.254     mjh.private.vtluug.org           # Mjh                   00:30:48:7e:28:da
@@ -36,6 +37,8 @@
 2607:b400:0006:cc80:0000:0aff:fe62:0010
 2607:b400:0006:cc80:0000:0aff:fe62:0012
 2607:b400:0006:cc80:0000:0aff:fe62:0013
+2607:b400:0006:cc80:0000:0aff:fe62:000d
+2607:b400:0006:cc80:0000:0aff:fe62:000e
 
 # Non-luug bare metal hosts
 2607:b400:0006:cc80:0230:48ff:fe7e:28da
