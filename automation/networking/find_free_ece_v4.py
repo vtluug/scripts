@@ -1,4 +1,4 @@
-import requests, os, ipaddress, json
+import requests, os, ipaddress, json, subprocess
 
 ece = "128.173.88.1/22"
 addrs = ipaddress.IPv4Network(ece, False)
@@ -11,9 +11,9 @@ for i in addrs:
 	if ret == 0:
 		print(" BAD PING")
 		continue
-	r = requests.get("https://ipinfo.io/"+str(i)+"/json").json()
-	if r.get("hostname") is not None:
-		print(" BAD RDNS "+r.get("hostname"))
+	rdns = subprocess.run(["dig", "+short", "-x", str(i)], capture_output=True, text=True, check=True).stdout.strip()
+	if rdns:
+		print(" BAD RDNS "+rdns)
 		continue
 	r = requests.get("https://orca-public.caas.nis.vt.edu/ipr/v1/public/ip/"+str(i)+"/contacts").content.decode("ascii")
 	if not "adminGroup" in r:
