@@ -34,7 +34,7 @@ sczi.vtluug.org
 sphinx.vtluug.org
 nikonwormhole.vtluug.org
 gibson.vtluug.org
-scarryterry.vtluug.org
+scaryterry.vtluug.org
 ')
 
 # Attempt to do an "Unsolicited ARP" to the Burris router
