@@ -16,7 +16,7 @@ export PATH=/sbin:/usr/sbin:${PATH}
 
 # Set interfaces
 EXT_IF=enp4s0
-INT_IF=enx803f5d086781
+INT_IF=enp5s0
 
 ARPING_HOST=128.173.88.1
 

@@ -2,8 +2,8 @@
 # and how to activate them. For more information, see interfaces(5).
 
 ### R310: built-in eth ports are fucked
-# - left (looking at rear) PCI is enp4s0
-# - enx... is a "temp" usb eth adapter
+# - left (looking at rear) PCIe is enp4s0
+# - right (looking at reat) PCIe is enp5s0
 
 # The loopback network interface
 auto lo
@@ -20,9 +20,9 @@ iface enp4s0 inet6 static
     gateway fe80::82ac:ac01:2fee:7af0
 
 # Internal
-auto enx803f5d086781
-iface enx803f5d086781 inet static
+auto enp5s0
+iface enp5s0 inet static
     address 10.98.0.1/16
 
-iface enx803f5d086781 inet6 static
+iface enp5s0 inet6 static
     address 2607:b400:0006:cc80::1/64

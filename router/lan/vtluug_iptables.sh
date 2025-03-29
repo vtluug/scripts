@@ -10,8 +10,8 @@ echo 1 > /proc/sys/net/ipv4/conf/all/forwarding
 # Nat
 #OLD: ptables --table nat --append POSTROUTING --source 10.98.0.0/16 --out-interface enp4s0 --jump SNAT --to 128.173.88.191
 /sbin/iptables -t nat -A POSTROUTING -o enp4s0 -j MASQUERADE
-/sbin/iptables -A FORWARD -i enp4s0 -o enx803f5d086781 -m state --state RELATED,ESTABLISHED -j ACCEPT
-/sbin/iptables -A FORWARD -i enx803f5d086781 -o enp4s0 -j ACCEPT
+/sbin/iptables -A FORWARD -i enp4s0 -o enp5s0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+/sbin/iptables -A FORWARD -i enp5s0 -o enp4s0 -j ACCEPT
 # Add a new function to add additional functionality
 
 # Block/unblock reflection attacks
