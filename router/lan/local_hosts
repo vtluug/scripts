@@ -8,6 +8,7 @@
 10.98.0.6       cyberdelia.private.vtluug.org    # 2900 #1               00:15:17:6a:e0:98
 10.98.0.7       dirtycow.private.vtluug.org      # 2900 #2               00:1e:c9:ef:13:f8
 10.98.0.8       gibson.vtluug.org                # t7910                 48:4d:7e:f9:8b:e5
+10.98.0.8       prospit.vtluug.org               # t5810                 d8:9e:f3:3e:f9:41
 
 # VMs
 10.98.0.10      chimera.private.vtluug.org       # FreeIPA               02:00:0a:62:00:0a
@@ -31,6 +32,8 @@
 2607:b400:0006:cc80:0215:17ff:fe6a:e098
 2607:b400:0006:cc80:021e:c9ff:feef:13f8
 2607:b400:0006:cc80:0215:17ff:fe12:7670
+2607:b400:0006:cc80:4a4d:7eff:fef9:8be5
+2607:b400:0006:cc80:da9e:f3ff:fe3e:f941
 
 # VMs
 2607:b400:0006:cc80:0000:0aff:fe62:000a
