@@ -3,13 +3,13 @@ Scripts for various things
 
 **See router/lan/local_hosts for a listing of ips & hosts**
 
-These scripts are written specifically for using joey as the router
+These scripts are written specifically for using shellshock as the router
 
 Setup instructions can be found at vtluug.org/rtfm.txt
 
 
 ## Router
-Configuration for VTLUUG's router (joey.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
+Configuration for VTLUUG's router (shellshock.vtluug.org). ARP/NDP Proxy are required due to port security. Dnsmasq is used for DHCP on our private network and provides SLAAC (+ PTR records???) using the ra-only mode.
 
 - router/ip-config
     - typical /etc/network/interfaces config for the router
