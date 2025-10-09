@@ -22,7 +22,7 @@ iface enp4s0 inet6 static
 # Internal
 auto enp5s0
 iface enp5s0 inet static
-    address 10.98.0.1/16
+    address 10.98.0.1/22
 
 iface enp5s0 inet6 static
     address 2607:b400:0006:cc80::1/64
