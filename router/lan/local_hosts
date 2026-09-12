@@ -9,6 +9,7 @@
 10.98.0.7       dirtycow.private.vtluug.org      # 2900 #2               00:1e:c9:ef:13:f8
 10.98.0.8       gibson.vtluug.org                # t7910                 48:4d:7e:f9:8b:e5
 10.98.0.196     magma.vtluug.org                 # switch ws-c3750g-48ts
+10.98.0.197     pahoehoe.private.vtluug.org      # arista switch         00:1c:73:54:c2:2a
 
 # netbooted cluster frontend
 10.98.0.24      prospit.vtluug.org               # t5810                 d8:9e:f3:3e:f9:41
