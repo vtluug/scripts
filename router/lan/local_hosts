@@ -12,19 +12,19 @@
 10.98.0.197     pahoehoe.private.vtluug.org      # arista switch         00:1c:73:54:c2:2a
 
 # netbooted cluster frontend
-10.98.0.24      prospit..private.vtluug.org               # t5810                 d8:9e:f3:3e:f9:41
-10.98.0.25      backbiter..private.vtluug.org             # blade                 40:f2:e9:c6:65:5f
-10.98.0.26      damocles..private.vtluug.org              # blade                 40:f2:e9:c6:67:db
-10.98.0.27      durendal..private.vtluug.org              # blade                 40:f2:e9:c6:68:95
-10.98.0.28      eyelander..private.vtluug.org             # blade                 40:f2:e9:c6:69:43
-10.98.0.29      excalibur..private.vtluug.org             # blade                 40:f2:e9:c6:69:67
-10.98.0.30      gram..private.vtluug.org                  # blade                 40:f2:e9:c6:74:59
-10.98.0.31      gryffindor..private.vtluug.org            # blade                 40:f2:e9:c6:74:d7
-10.98.0.32      kusanagi..private.vtluug.org              # blade                 40:f2:e9:c6:75:97
-10.98.0.33      narsil..private.vtluug.org                # blade                 40:f2:e9:c6:75:9d
-10.98.0.34      oathbringer..private.vtluug.org           # blade                 40:f2:e9:c6:75:f1
-10.98.0.35      riptide..private.vtluug.org               # blade                 40:f2:e9:c6:76:21
-10.98.0.36      sting..private.vtluug.org                 # blade                 40:f2:e9:c6:77:23
+10.98.0.24      prospit.private.vtluug.org               # t5810                 d8:9e:f3:3e:f9:41
+10.98.0.25      backbiter.private.vtluug.org             # blade                 40:f2:e9:c6:65:5f
+10.98.0.26      damocles.private.vtluug.org              # blade                 40:f2:e9:c6:67:db
+10.98.0.27      durendal.private.vtluug.org              # blade                 40:f2:e9:c6:68:95
+10.98.0.28      eyelander.private.vtluug.org             # blade                 40:f2:e9:c6:69:43
+10.98.0.29      excalibur.private.vtluug.org             # blade                 40:f2:e9:c6:69:67
+10.98.0.30      gram.private.vtluug.org                  # blade                 40:f2:e9:c6:74:59
+10.98.0.31      gryffindor.private.vtluug.org            # blade                 40:f2:e9:c6:74:d7
+10.98.0.32      kusanagi.private.vtluug.org              # blade                 40:f2:e9:c6:75:97
+10.98.0.33      narsil.private.vtluug.org                # blade                 40:f2:e9:c6:75:9d
+10.98.0.34      oathbringer.private.vtluug.org           # blade                 40:f2:e9:c6:75:f1
+10.98.0.35      riptide.private.vtluug.org               # blade                 40:f2:e9:c6:76:21
+10.98.0.36      sting.private.vtluug.org                 # blade                 40:f2:e9:c6:77:23
 
 # VMs
 10.98.0.10      chimera.private.vtluug.org       # FreeIPA               02:00:0a:62:00:0a
